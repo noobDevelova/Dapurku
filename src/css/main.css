@@ -1,0 +1,99 @@
+/* Gaya tambahan */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+
+  #sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background-color: #343a40;
+    color: #fff;
+    transition: all 0.3s;
+  }
+
+  #sidebar.active {
+    width: 80px;
+  }
+
+  #sidebar .sidebar-header {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #sidebar .navbar-nav {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+  }
+
+  #sidebar .navbar-nav p {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+  }
+
+  #sidebar .navbar-nav a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #fff;
+  }
+
+  #sidebar .navbar-nav a:hover {
+    color: #7386D5;
+    background: #fff;
+  }
+
+  #sidebar .navbar-nav a.active, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+  }
+
+  #sidebar a[data-bs-toggle="collapse"] {
+    position: relative;
+  }
+
+  #sidebar .navbar-nav > .nav-item > .nav-link {
+    text-align: center;
+    width: 100%;
+    padding: 0.5em 0;
+  }
+
+  #sidebar .dropdown-menu {
+    text-align: center;
+  }
+
+  #content {
+    width: 100%;
+    padding: 15px;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 768px) {
+    #sidebar {
+      min-width: 80px;
+      max-width: 80px;
+      text-align: center;
+      display: block;
+      transition: all 0.3s;
+      position: absolute;
+    }
+
+    #sidebar.active {
+      margin-left: -80px;
+    }
+
+    #content {
+      width: 100%;
+      transition: all 0.3s;
+    }
+
+    #sidebarCollapse span {
+      display: none;
+    }
+  }
